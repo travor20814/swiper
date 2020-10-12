@@ -14,11 +14,7 @@ function extend(target, src) {
 }
 
 function needsNavigation(params = {}) {
-  return (
-    params.navigation &&
-    typeof params.navigation.nextEl === 'undefined' &&
-    typeof params.navigation.prevEl === 'undefined'
-  );
+  return params.navigation;
 }
 function needsPagination(params = {}) {
   return params.pagination && typeof params.pagination.el === 'undefined';

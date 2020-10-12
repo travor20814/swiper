@@ -1,5 +1,5 @@
 {
-  "name": "swiper",
+  "name": "swiper-fork-navigation-check-fixed",
   "version": "6.3.3",
   "description": "Most modern mobile touch slider and framework with hardware accelerated transitions",
   "main": "swiper.cjs.js",

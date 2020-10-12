@@ -13,6 +13,7 @@ const Swiper = forwardRef(
   (
     {
       className,
+      arrowClassName,
       tag: Tag = 'div',
       wrapperTag: WrapperTag = 'div',
       children,
@@ -151,8 +152,18 @@ const Swiper = forwardRef(
         {slots['container-start']}
         {needsNavigation(swiperParams) && (
           <>
-            <div ref={prevElRef} className="swiper-button-prev" />
-            <div ref={nextElRef} className="swiper-button-next" />
+            <div
+              ref={prevElRef}
+              className={uniqueClasses(
+                `swiper-button-prev${arrowClassName ? ` ${arrowClassName}` : ''}`,
+              )}
+            />
+            <div
+              ref={nextElRef}
+              className={uniqueClasses(
+                `swiper-button-next${arrowClassName ? ` ${arrowClassName}` : ''}`,
+              )}
+            />
           </>
         )}
         {needsScrollbar(swiperParams) && <div ref={scrollbarElRef} className="swiper-scrollbar" />}
